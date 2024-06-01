@@ -13,14 +13,11 @@ namespace Fiap.Application.IoC
         public static void AddResolveDependencies(this IServiceCollection services)
         {
             //Application
-            services.AddScoped<ICadastroApplicaionService, CadastroApplicationService>();
             services.AddScoped<IUsuarioApplicationServiceGenerico, UsuarioApplicationServiceGenerico>();
             services.AddScoped<IEnderecoApplicationServiceGenerico, EnderecoApplicationServiceGenerico>();
             services.AddScoped<IProdutoApplicationServiceGenerico, ProdutoApplicationServiceGenerico>();
 
             //Domain
-            services.AddScoped<ICadastroRepository, CadastroRepository>();
-            services.AddScoped<ICadastroService, CadastroService>();
             services.AddScoped(typeof(ICadastroServiceGenerico<>), typeof(CadastroServiceGenerico<>));
             services.AddScoped(typeof(ICadastroRepositoryGenerico<>), typeof(CadastroRepositoryGenerico<>));
             //Data
