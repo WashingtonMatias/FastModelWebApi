@@ -40,12 +40,13 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-// Configure the HTTP request pipeline.
-app.UseHttpsRedirection();
+// Comentar a linha de redirecionamento HTTPS para testes
+// app.UseHttpsRedirection();
+
 app.UseAuthorization();
 app.UseCors("AllowAll");
 
-// Configure URL para escutar em todas as interfaces de rede na porta 5152
+// Configurar URL para escutar em todas as interfaces de rede na porta 5152
 app.Urls.Add("http://*:5152");
 
 app.MapControllers();
