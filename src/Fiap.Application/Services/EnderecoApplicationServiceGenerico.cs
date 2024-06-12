@@ -24,14 +24,9 @@ namespace Fiap.Application.Services
             var entity = _mapper.Map<Endereco>(viewModel);
             var entities = ObterCadastros().OrderBy(x => x.Id_Endereco).LastOrDefault();
             if (entities != null)
-            {
                 entity.Id_Endereco = entities.Id_Endereco + 1;
-            }
             else
-            {
-                // Se não houver entidades, defina o Id_Endereco como 1 ou outro valor inicial
                 entity.Id_Endereco = 1;
-            }
             var addedEntity = _cadastroService.AdicionarCadastro(entity);
             return _mapper.Map<EnderecoViewModel>(addedEntity);
         }

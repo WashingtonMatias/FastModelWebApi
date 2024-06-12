@@ -47,7 +47,7 @@ app.UseAuthorization();
 app.UseCors("AllowAll");
 
 // Configurar URL para escutar em todas as interfaces de rede na porta 5152
-app.Urls.Add("http://*:5152");
+//app.Urls.Add("http://*:5152");
 
 app.MapControllers();
 

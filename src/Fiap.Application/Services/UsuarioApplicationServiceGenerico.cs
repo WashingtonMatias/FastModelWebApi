@@ -23,7 +23,10 @@ namespace Fiap.Application.Services
         {
             var entity = _mapper.Map<Usuario>(viewModel);
             var entities = ObterCadastros().OrderBy(x => x.Id_Usuario).LastOrDefault();
-            
+            if (entities != null)
+                entity.Id_Usuario = entities.Id_Usuario + 1;
+            else
+                entity.Id_Usuario = 1;
             var addedEntity = _cadastroService.AdicionarCadastro(entity);
             return _mapper.Map<UsuarioViewModel>(addedEntity);
         }
