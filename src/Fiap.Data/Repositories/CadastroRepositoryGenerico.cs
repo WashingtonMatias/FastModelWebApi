@@ -1,5 +1,6 @@
 ﻿using Fiap.Data.Context;
 using Fiap.Domain.Interfaces;
+using Fiap.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Fiap.Data.Repositories
@@ -45,6 +46,11 @@ namespace Fiap.Data.Repositories
         public T ObterCadastro(int id)
         {
             return _dbSet.Find(id);
+        }
+
+        public Usuario ObterLogin(string email, string senha)
+        {
+            return _dbContext.Usuario.FirstOrDefault(u => u.Email == email && u.Senha == senha);
         }
 
         public IEnumerable<T> ObterCadastros()

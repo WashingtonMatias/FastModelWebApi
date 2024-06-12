@@ -49,6 +49,17 @@ namespace Fiap.Application.Services
             return _mapper.Map<UsuarioViewModel>(entity);
         }
 
+        public bool ObterLogin(string email, string senha)
+        {
+            var login = _cadastroService.ObterLogin(email, senha);
+
+            if (login != null)
+            {
+                return true;
+            }
+            return false;
+        }
+
         public IEnumerable<UsuarioViewModel> ObterCadastros()
         {
             var entities = _cadastroService.ObterCadastros();

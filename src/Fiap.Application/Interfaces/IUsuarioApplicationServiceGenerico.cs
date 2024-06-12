@@ -14,5 +14,6 @@ namespace Fiap.Application.Interfaces
         string DeletarCadastro(int id);
         UsuarioViewModel ObterCadastro(int id);
         IEnumerable<UsuarioViewModel> ObterCadastros();
+        bool ObterLogin(string email, string senha);
     }
 }

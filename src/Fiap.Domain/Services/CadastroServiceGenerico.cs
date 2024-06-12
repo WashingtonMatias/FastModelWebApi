@@ -1,4 +1,5 @@
 ﻿using Fiap.Domain.Interfaces;
+using Fiap.Domain.Models;
 
 namespace Fiap.Domain.Services
 {
@@ -31,6 +32,10 @@ namespace Fiap.Domain.Services
             return _cadastroRepository.ObterCadastro(id);
         }
 
+        public Usuario ObterLogin(string email, string senha)
+        {
+            return _cadastroRepository.ObterLogin(email, senha);
+        }
         public IEnumerable<T> ObterCadastros()
         {
             return _cadastroRepository.ObterCadastros();

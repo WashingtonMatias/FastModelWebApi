@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Fiap.Domain.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,5 +14,6 @@ namespace Fiap.Domain.Interfaces
         string DeletarCadastro(int id);
         T ObterCadastro(int id);
         IEnumerable<T> ObterCadastros();
+        Usuario ObterLogin(string email, string senha);
     }
 }

@@ -3,6 +3,7 @@ using Fiap.Application.ViewModels;
 using Fiap.Domain.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Net.Mail;
 
 namespace Fiap.WebAPI.Controllers
 {
@@ -52,6 +53,17 @@ namespace Fiap.WebAPI.Controllers
         public IActionResult Obter(int id)
         {
             var resultado = _applicationService.ObterCadastro(id);
+
+            if (resultado != null)
+                return Ok(resultado);
+            else
+                return NotFound("Usuário não encontrado");
+        }
+
+        [HttpGet("Login/{email}/{senha}")]
+        public IActionResult Login(string email, string senha)
+        {
+            var resultado = _applicationService.ObterLogin(email, senha);
 
             if (resultado != null)
                 return Ok(resultado);
