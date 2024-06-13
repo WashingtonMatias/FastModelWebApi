@@ -15,27 +15,27 @@ namespace Fiap.Domain.Models
 
         [Column("CEP")]
         [Display(Name = "CEP")]
-        public string CEP { get; set; }
+        public string? CEP { get; set; }
 
         [Column("RUA")]
         [Display(Name = "Rua")]
-        public string Rua { get; set; }
+        public string? Rua { get; set; }
 
         [Column("NUMERO")]
         [Display(Name = "Numero")]
-        public string Numero { get; set; }
+        public string? Numero { get; set; }
 
         [Column("BAIRRO")]
         [Display(Name = "Bairro")]
-        public string Bairro { get; set; }
+        public string? Bairro { get; set; }
 
         [Column("CIDADE")]
         [Display(Name = "Cidade")]
-        public string Cidade { get; set; }
+        public string? Cidade { get; set; }
 
         [Column("ID_USUARIO")]
         [Display(Name = "Id_Usuario")]
-        public int Id_Usuario { get; set; }
+        public int? Id_Usuario { get; set; }
 
         [ForeignKey("Id_Usuario")]
         public Usuario Usuario { get; set; }

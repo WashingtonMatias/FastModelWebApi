@@ -18,23 +18,23 @@ namespace Fiap.Domain.Models
 
         [Column("NOME")]
         [Display(Name = "Nome")]
-        public string Nome { get; set; }
+        public string? Nome { get; set; }
 
         [Column("SOBRENOME")]
         [Display(Name = "SobreNome")]
-        public string SobreNome { get; set; }
+        public string? SobreNome { get; set; }
 
         [Column("EMAIL")]
         [Display(Name = "Email")]
-        public string Email { get; set; }
+        public string? Email { get; set; }
 
         [Column("DATA_NASCIMENTO")]
         [Display(Name = "DataNascimento")]
-        public DateTime Data_Nascimento { get; set; }
+        public DateTime? Data_Nascimento { get; set; }
 
         [Column("SENHA")]
         [Display(Name = "Senha")]
-        public string Senha { get; set; }
+        public string? Senha { get; set; }
 
     }
 }

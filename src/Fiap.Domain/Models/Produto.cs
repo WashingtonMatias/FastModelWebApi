@@ -15,22 +15,22 @@ namespace Fiap.Domain.Models
 
         [Column("NOME")]
         [Display(Name = "Nome")]
-        public string Nome { get; set; }
+        public string? Nome { get; set; }
 
         [Column("PRECO")]
         [Display(Name = "Preco")]
-        public decimal Preco { get; set; }
+        public decimal? Preco { get; set; }
 
         [Column("RATING")]
         [Display(Name = "Rating")]
-        public decimal Rating { get; set; }
+        public decimal? Rating { get; set; }
 
         [Column("IMG_URL")]
         [Display(Name = "Img_URL")]
-        public string Img_URL { get; set; }
+        public string? Img_URL { get; set; }
 
         [Column("CONT_REVIEWS")]
         [Display(Name = "CONT_Reviews")]
-        public int CONT_Reviews { get; set; }
+        public int? CONT_Reviews { get; set; }
     }
 }
