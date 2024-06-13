@@ -6,7 +6,7 @@
         public string? Nome { get; set; }
         public decimal? Preco { get; set; }
         public double? Rating { get; set; }
-        public string? ImgUrl { get; set; }
+        public string? Img_Url { get; set; }
         public int? Cont_Reviews { get; set; }
     }
 }
